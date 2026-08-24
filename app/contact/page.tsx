@@ -4,6 +4,8 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { Mail, Phone, MapPin, Send, MessageCircle, Check, Clock, Sparkles } from 'lucide-react';
 
+import { siteConfig } from '@/data/siteConfig';
+
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
@@ -55,7 +57,7 @@ export default function ContactPage() {
 
             <div className="space-y-5 text-xs text-charcoal-600 font-light">
               <a
-                href="https://wa.me/919876543210?text=Namaste,%20I%20need%20assistance%20with%20an%20order"
+                href={`https://wa.me/${siteConfig.contact.whatsappFormatted}?text=Namaste,%20I%20need%20assistance%20with%20an%20order`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-5 bg-white border border-kraft-300 flex items-center justify-between shadow-subtle hover:border-copper-600 transition-colors group"
@@ -68,7 +70,7 @@ export default function ContactPage() {
                     <h4 className="font-serif text-base text-charcoal-900 font-medium group-hover:text-copper-700">
                       WhatsApp Concierge
                     </h4>
-                    <p className="text-charcoal-500 font-mono text-[11px]">+91 98765 43210</p>
+                    <p className="text-charcoal-500 font-mono text-[11px]">{siteConfig.contact.whatsapp}</p>
                   </div>
                 </div>
                 <span className="text-xs font-mono uppercase text-copper-600">Chat Now →</span>
@@ -79,18 +81,17 @@ export default function ContactPage() {
                   <Mail className="w-4 h-4 text-copper-600" />
                   <span>Email Inquiries</span>
                 </div>
-                <p className="text-charcoal-700 font-mono text-xs">care@rudrabeejrudraksha.com</p>
-                <p className="text-[11px] text-charcoal-400">Response guaranteed within 12 business hours.</p>
+                <p className="text-charcoal-700 font-mono text-xs">{siteConfig.contact.supportEmail}</p>
+                <p className="text-[11px] text-charcoal-400">{siteConfig.contact.responsePromise}</p>
               </div>
 
               <div className="p-5 bg-white border border-kraft-300 space-y-2 shadow-subtle">
                 <div className="flex items-center gap-2 text-charcoal-900 font-serif text-sm font-medium">
                   <MapPin className="w-4 h-4 text-copper-600" />
-                  <span>Fulfillment Sanctums</span>
+                  <span>Fulfillment Sanctum</span>
                 </div>
                 <p className="text-charcoal-700 leading-relaxed">
-                  Haridwar & Varanasi, India <br />
-                  Central Distribution: Indiranagar, Bengaluru – 560038
+                  {siteConfig.contact.address}
                 </p>
               </div>
             </div>
