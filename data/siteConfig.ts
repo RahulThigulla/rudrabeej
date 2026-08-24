@@ -5,8 +5,8 @@ export const siteConfig = {
   
   contact: {
     // Phone & WhatsApp (Read from Vercel Environment Variables or defaults)
-    phone: process.env.NEXT_PUBLIC_CONTACT_PHONE || '+91 98765 43210',
-    whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '+91 98765 43210',
+    phone: process.env.NEXT_PUBLIC_CONTACT_PHONE || '+91 79892 02545',
+    whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '+91 79892 02545',
     whatsappFormatted: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ? process.env.NEXT_PUBLIC_WHATSAPP_NUMBER.replace(/[^0-9]/g, '') : '919876543210',
     
     // Support & Admin Emails
